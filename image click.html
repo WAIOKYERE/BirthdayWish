@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Click</title>
+  <style>
+    /* Add your styles here */
+    .image-container {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+    #secondImage {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="image-container">
+  <!-- First image -->
+  <img id="firstImage" src="Happybirthday.png" onclick="showSecondImage()" alt="First Image">
+  
+  <!-- Second image (initially hidden) -->
+  <img id="secondImage" src="Happy Birthday Adwoa.jpg" alt="Second Image">
+</div>
+
+<script>
+  function showSecondImage() {
+    var firstImg = document.getElementById("firstImage");
+    var secondImg = document.getElementById("secondImage");
+    
+    // Hide the first image and show the second image
+    firstImg.style.display = "none";
+    secondImg.style.display = "block";
+  }
+</script>
+
+</body>
+</html>
